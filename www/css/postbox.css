@@ -1,0 +1,172 @@
+.newpost
+{
+	resize: vertical;
+	overflow: hidden;
+	word-wrap: normal;
+	width: 100%;
+	height: 100px;
+	font-size: 14px;
+	padding: 5px;
+	border: 1px solid transparent;
+	font-family: Gafata,sans-serif;
+}
+
+.newpost:focus
+{
+	outline: 0;
+	border: 1px solid #4D90FE;
+}
+
+.newpostimages
+{
+	border-top: 1px solid #ddd;
+	background-color: #eee;
+}
+
+.newpostbottom
+{
+	border-top: 1px solid #ddd;
+	background-color: #eee;
+	text-align: right;
+	padding: 5px;
+}
+
+.newpostfiles
+{
+	float: left;
+}
+
+.uploadingfile
+{
+	
+}
+
+.uploadfilepreview
+{
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	float: left;
+	
+	/*background-size: cover;
+	background-position: center;
+	background-image: url('/files/45/');*/
+	
+	display: inline-block;
+}
+
+.uploadfileinfo
+{
+	width: auto;
+	position: relative;
+	overflow: hidden;
+	padding: 5px 10px;
+	height: 50px;
+}
+
+.uploadfilenamewrapper
+{
+	width: auto;
+	overflow: hidden;
+}
+
+.uploadfilename
+{
+	margin-bottom: 5px;
+	font-family: "Open Sans",sans-serif;
+	/*font-weight: bold;*/
+	font-size: 16px;
+	display: inline-block;
+	width: 100%;
+	
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.uploadfileactions
+{
+	display: inline-block;
+	float: right;
+}
+
+.uploadfileaction
+{
+	color: rgb(204, 204, 204);
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4), 0px 1px 0px rgba(239, 239, 239, 0.5);
+	font-size: 15px;
+	text-align: center;
+	padding: 1px;
+	
+	cursor: pointer;
+}
+
+.uploadfileaction:hover
+{
+	color: #aaa;
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4), 0px -1px 0px rgba(239, 239, 239, 0.5);
+}
+
+.uploadfileprogressbar
+{
+	width: 100%;
+	background-color: rgb(204, 204, 204);
+	border-radius: 15px;
+	height: 20px;
+	text-align: center;
+	overflow: hidden;
+	/*box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3) inset;*/
+	
+	position: relative;
+}
+
+.uploadfileprogress
+{
+	height: 100%;
+	background-color: #637BD3;
+	transition: width 100ms ease-out;
+	width: 0%;
+	text-align: left;
+	/*box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);*/
+	border-radius: 100px;
+	overflow: hidden;
+	
+	position: absolute;
+	
+	top: 0px;
+}
+
+.uploadfileprogressbar[finished="begin"]
+{
+	background-color: #637BD3;
+}
+
+.uploadfileprogressbar[finished="yes"]
+{
+	background-color: #37BC2E;
+	transition: background 400ms ease-out;
+}
+
+.uploadfileprogresstext
+{
+	display: inline-block;
+	margin-top: 2px;
+	font-size: 12px;
+	font-family: Gafata;
+}
+
+.uploadfileprogressbar[finished] .uploadfileprogresstext
+{
+	color: white;
+}
+
+.uploadfileprogresswhitetext
+{
+	display: inline-block;
+	position: absolute;
+	top: 2px;
+	font-size: 12px;
+	font-family: Gafata;
+	color: white;
+	white-space: nowrap;
+}

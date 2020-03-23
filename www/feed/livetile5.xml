@@ -1,0 +1,18 @@
+<tile>
+	<visual lang="en-US" version="2">  
+		<binding template="TileSquare150x150PeekImageAndText04" branding="logo">
+			<image id="1" src="http://localkontakti/profilemedia/avatar2.png"/>
+			<text id="1">Lmao live tile</text> 
+		</binding>
+
+		<binding template="TileWide310x150ImageAndText01" branding="logo">
+			<image id="1" src="http://localkontakti/profilemedia/avatar2.png"/>
+			<text id="1">Lmao live tile</text> 
+		</binding>
+ 
+		<binding template="TileSquare310x310ImageAndTextOverlay01" branding="logo">
+			<image id="1" src="http://localkontakti/profilemedia/avatar2.png"/>
+			<text id="1">Lmao live tile</text>
+		</binding>
+	</visual>
+</tile>

@@ -1,0 +1,27 @@
+<tile>
+	<visual lang="en-US" version="2">
+		<binding template="TileSquare150x150PeekImageAndText02" branding="logo">
+			<image id="1" src="http://localkontakti/profilemedia/avatar2.png"/>
+			<text id="1">Robert L. Svarinskis</text> 
+			<text id="2">Lmao live tile</text> 
+		</binding>
+
+		<binding template="TileWide310x150SmallImageAndText04" branding="logo">
+			<image id="1" src="http://localkontakti/profilemedia/avatar2.png"/>
+			<text id="1">Robert L. Svarinskis</text>
+			<text id="2">Lmao live time</text> 
+		</binding>
+ 
+		<binding template="TileSquare310x310SmallImagesAndTextList03" branding="logo">
+			<image id="1" src="http://localkontakti/profilemedia/avatar2.png" alt=""/>
+			<image id="2" src="http://localkontakti/profilemedia/avatar1.png"/>
+			<image id="3" src="http://localkontakti/profilemedia/avatar3.png"/>
+			<text id="1">1) Robert L. Svarinskis</text>
+			<text id="2">1) Lmao live tile</text>
+			<text id="3">2) Robert L. Svarinskis</text>
+			<text id="4">2) Lmao live tile</text>
+			<text id="5">3) Robert L. Svarinskis</text>
+			<text id="6">3) Lmao live tile</text>
+		</binding>
+	</visual>
+</tile>

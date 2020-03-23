@@ -1,0 +1,57 @@
+ErrorDocument 400 /error.php
+ErrorDocument 401 /error.php
+ErrorDocument 402 /error.php
+ErrorDocument 403 /error.php
+ErrorDocument 404 /error.php
+ErrorDocument 405 /error.php
+ErrorDocument 500 /error.php
+
+SetOutputFilter DEFLATE
+
+DirectoryIndex index.php
+
+<FilesMatch ".png$">
+	ErrorDocument 404 "/images/notfound.png"
+</FilesMatch>
+
+Options -Indexes
+
+RewriteEngine On
+
+RewriteRule ^profile/([.A-Za-z0-9-]+)/photos$ get/photos.php?user=$1 [QSA,NC]
+RewriteRule ^profile/([.A-Za-z0-9-]+)/photos/$ get/photos.php?user=$1 [QSA,NC]
+
+RewriteRule ^profile/([.A-Za-z0-9-]+)/ get/profile.php?user=$1 [QSA,NC]
+RewriteRule ^profile/([.A-Za-z0-9-]+) get/profile.php?user=$1 [QSA,NC]
+
+RewriteRule ^post/([0-9]+)/ get/post.php?post=$1 [QSA,NC]
+RewriteRule ^post/([0-9]+) get/post.php?post=$1 [QSA,NC]
+
+RewriteRule ^post/-1/ tools/ayylmao.php [QSA,NC]
+RewriteRule ^post/-1 tools/ayylmao.php [QSA,NC]
+
+#Access to all files
+RewriteRule ^files/([.A-Za-z0-9-_]+)$ get/media.php?id=$1 [NC]
+RewriteRule ^files/([.A-Za-z0-9-_]+)/$ get/media.php?id=$1 [NC]
+
+#The /files/ directory redirects to a random image
+RewriteRule ^files$ images/profile.png [NC]
+RewriteRule ^files/$ images/profile.png [NC]
+
+#Access to profile pictures and profile sidebars
+RewriteRule ^profilemedia/avatar([0-9-]+)\.png get/photo_avatar.php?uid=$1 [NC]
+RewriteRule ^profilemedia/avatar([0-9-]+)/ get/photo_avatar.php?uid=$1 [NC]
+RewriteRule ^profilemedia/sidebar([0-9-]+)\.png get/photo_sidebar.php?uid=$1 [NC]
+RewriteRule ^profilemedia/sidebar([0-9-]+)/ get/photo_sidebar.php?uid=$1 [NC]
+#Access to own profile pictures and profile sidebar
+RewriteRule ^profilemedia/avatar get/photo_avatar.php [NC]
+RewriteRule ^profilemedia/sidebar get/photo_sidebar.php [NC]
+
+#Favicons get redirected to the favicon directory
+RewriteRule ^apple-touch-icon([.A-Za-z0-9-]*).png$ favicons/apple-touch-icon$1.png [NC]
+RewriteRule ^favicon([.A-Za-z0-9-]*)$ favicons/favicon$1 [NC]
+RewriteRule ^mstile-([.A-Za-z0-9-]*).png$ favicons/mstile-$1.png [NC]
+
+#Other stuff
+Redirect 301 ^kontakti http://kontakti.no-ip.biz
+Redirect 301 ^cubiverse http://cubiverse.no-ip.biz
